@@ -1,9 +1,9 @@
-name: main2
+name: weixin
 on:
   workflow_dispatch:
   schedule: 
     # 代表国际标准时间4点0分，北京时间需要+8小时，代表北京时间中午12点运行
-    - cron: '0 0 8 * * ?'
+    - cron: '0 0 11 * * ?'
 jobs:
 #将工作流程中运行的所有作业组合在一起
   build:
@@ -26,5 +26,3 @@ jobs:
       - name: weixin
         run: |
           python3 main.py
-
-
